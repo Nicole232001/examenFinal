@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, AlertController } from 'ionic-angular';
 import { RegistrarPage } from '../registrar/registrar';
 import { Storage } from '@ionic/storage';
+import { ProductosPage } from '../productos/productos';
 
 @Component({
   selector: 'page-home',
@@ -11,6 +12,9 @@ export class HomePage {
 usuario=[]
 correo:'';
 contrasena:'';
+nombre:'';
+telefono:'';
+productos=ProductosPage;
 registar=RegistrarPage;
   constructor(public navCtrl: NavController, public alertCtrl:AlertController, public storage: Storage) {
     this.storage.keys()
@@ -31,10 +35,7 @@ registar=RegistrarPage;
     let index=this.usuario.findIndex(usuario => usuario.correo == this.correo && usuario.contrasena == this.contrasena);
 
       if (index>=0){
-        const alert=this.alertCtrl.create({
-          title:"Bienvenido", buttons:["ok"]
-        })
-        alert.present();
+        this.navCtrl.push(this.productos);
       }
       else {
         const alert=this.alertCtrl.create({

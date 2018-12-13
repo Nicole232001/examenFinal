@@ -1,12 +1,16 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      
+    <ion-title style= "background-color: #C8D6AF">
+      <h2 style="color:black">Mazon</h2>
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding style= "background-color: #C8D6AF">
+  <ion-card-header>
+    Iniciar Sesión
+  </ion-card-header>
+  <!-- https://coolors.co/4e598c-e9f1f7-f2d0a4-ffeccc-c8d6af -->
   <ion-card>
     <ion-item>
       <ion-input type="text" value="" [(ngModel)]="correo" placeholder="correo"></ion-input>
@@ -18,13 +22,5 @@
   </ion-card>
   <button ion-button block (click)= "clickinicio()">Iniciar sesión</button>
   <button ion-button block (click)= "clickregistro()">Registrase</button>
-
-<h2>Usuarios</h2>
-<ion-card *ngFor ="let u of usuario">
-  <ion-item>
-    <p>{{u.correo}}</p>
-    <p>{{u.contrasena}}</p>
-  </ion-item>
-</ion-card>
 
 </ion-content>

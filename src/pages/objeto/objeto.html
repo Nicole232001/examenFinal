@@ -1,0 +1,45 @@
+<!--
+  Generated template for the ObjetoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title style= "background-color: #FFECCC">
+      <h2 style="color:black" >{{pelicula}}</h2>
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding style= "background-color: #FFECCC">
+<img [src]=producto.imagen>
+<ion-item>
+  <p>Vendedor</p>
+  {{producto.vendedor.nombre}}
+  <ion-icon name="star" *ngFor= "let s of producto.vendedor.valoracion"></ion-icon>
+</ion-item>
+<ion-item>
+  <p>Reseña</p>
+  <ion-avatar item-start>
+    <img src="../assets/imag2.png">
+  </ion-avatar>
+  <h2>{{producto.resena.autor}}</h2>
+  <p>{{producto.resena.fecha}} </p>
+  <ion-card-content>
+    <p>{{producto.resena.comentario}}</p>
+  </ion-card-content>
+</ion-item>
+<ion-item>
+    <p>Fecha de lanzamiento del producto</p>
+    {{producto.fechal}}
+  </ion-item>
+  <ion-item>
+    <p>Número de productos disponibles</p>
+    {{producto.disponibles}}
+  </ion-item>
+  <button ion-button block (click)= "clicktotal()">Agregar a carrito</button>
+</ion-content>

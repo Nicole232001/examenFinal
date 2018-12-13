@@ -8,12 +8,18 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { RegistrarPage } from '../pages/registrar/registrar';
 import { IonicStorageModule } from '@ionic/storage';
+import { ProductosPage } from '../pages/productos/productos';
+import { ObjetoPage } from '../pages/objeto/objeto';
+import { CarritoPage } from '../pages/carrito/carrito';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    RegistrarPage
+    RegistrarPage,
+    ProductosPage,
+    ObjetoPage,
+    CarritoPage
   ],
   imports: [
     BrowserModule,
@@ -24,7 +30,10 @@ import { IonicStorageModule } from '@ionic/storage';
   entryComponents: [
     MyApp,
     HomePage,
-    RegistrarPage
+    RegistrarPage,
+    ProductosPage,
+    ObjetoPage,
+    CarritoPage
   ],
   providers: [
     StatusBar,
